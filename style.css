@@ -1,0 +1,151 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: "Lucida Console", monospace, inherit;
+	vertical-align: baseline;
+}
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*font-smoothing: antialiased;*/
+    text-rendering: optimizeLegibility;
+    padding:0;
+    margin:0;
+	font-size: calc(1em + 1.0vw);
+}
+
+body {
+    color: whitesmoke;
+    background-color: #111120;
+}
+
+hr {
+    border: none;
+    height:8px;
+    color: #BB0000;
+    background-color: #BB0000;
+    text-align:left;
+    margin-left:0;
+  }
+
+/* Scaling */
+.font-size-2x {
+    font-size: 200%;
+}
+
+/* Positioning */
+.vertical-center {
+    position: absolute;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.hidden-text-block {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+/* Hidden Text Labels */
+.label-hello:after{
+    content:"Hi! I'm Nick John Eliopoulos.";
+}
+
+/*.label-hello:hover:after{
+
+}*/
+
+/* Hidden Text Labels */
+.label-contact:after{
+    color: #BB0000;
+    content:"Contact Me";
+}
+
+/*.label-contact:hover:after{
+
+}*/
+
+.label-about:after{
+    color: #BB0000;
+    content:"About Me";
+}
+
+/*.label-about:hover:after{
+
+}*/
+
+.label-work:after{
+    color: #BB0000;
+    content:"My Work";
+}
+
+/*.label-work:hover:after{
+
+}*/
+
+/* Hover States */
+.on-hover-40, .on-hover--40 {
+	transition: all .2s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.on-hover-40:hover {
+	margin-left: 10px;
+	transition: all .2s cubic-bezier(0.2, 0.6, 0.2, 1);	
+}
+.on-hover--40:hover {
+	margin-left: -10px;
+	transition: all .2s cubic-bezier(0.2, 0.6, 0.2, 1);	
+}
+
+@media screen and (max-width: 767px) {
+    .on-hover-40:hover {
+        margin-left: 0px;	
+    }
+    .on-hover--40:hover {
+        margin-left: 0px;
+    }	
+}
+
+.animate {
+	-webkit-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-moz-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-webkit-animation-fill-mode:backwards;
+	-moz-animation-fill-mode:backwards;
+	animation-fill-mode:backwards;
+}
+
+@-webkit-keyframes animate {
+	0% {opacity: 0;-webkit-transform: translateY(100%);}
+	100% {opacity: 1;-webkit-transform: translateY(0%);}	
+}
+
+@keyframes animate {
+	0% {opacity: 0;transform: translateY(30vh);}
+	100% {opacity: 1;transform: translateY(0%);}	
+}
+
+/* Delays */
+.delay02 { -webkit-animation-delay: .2s; animation-delay: .2s;}
+.delay04 { -webkit-animation-delay: .4s; animation-delay: .4s;}
+.delay06 { -webkit-animation-delay: .6s; animation-delay: .6s;}
+.delay08 { -webkit-animation-delay: .8s; animation-delay: .8s;}
+.delay10 { -webkit-animation-delay: 1s; animation-delay: 1s;}
+.delay12 { -webkit-animation-delay: 1.2s; animation-delay: 1.2s;}
